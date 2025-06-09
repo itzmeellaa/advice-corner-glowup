@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝑀𝒶𝓃𝓊𝑒𝓁𝓁𝒶🌸💗’s Advice Corner</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffe0f0, #e6ccff);
+      color: #4b2c5e;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f8d1e3;
+      text-align: center;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #a64ca6;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    #notifyBtn {
+      background-color: #d9a7ff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff0f9;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #994cc3;
+    }
+    .advice {
+      background-color: #fce8ff;
+      padding: 1rem 1.5rem;
+      border-left: 6px solid #cc99ff;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .form-section, .signup-section {
+      background-color: #f9e6ff;
+      padding: 1.5rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+    }
+    label, input, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    input, textarea {
+      padding: 0.7rem;
+      border-radius: 10px;
+      border: 1px solid #d4a4ff;
+      background-color: #fffaff;
+    }
+    button.submit-btn {
+      background-color: #cc99ff;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .chat-box {
+      background-color: #fdf6ff;
+      padding: 1rem;
+      border-radius: 15px;
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .chat-msg {
+      margin: 0.5rem 0;
+      padding: 0.7rem 1rem;
+      background-color: #fff;
+      border-radius: 15px;
+      width: fit-content;
+      max-width: 80%;
+    }
+    .client-msg {
+      align-self: flex-end;
+      background-color: #e6ccff;
+    }
+    .advisor-msg {
+      align-self: flex-start;
+      background-color: #fce8ff;
+    }
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .image-gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f2d6eb;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>𝑀𝒶𝓃𝓊𝑒𝓁𝓁𝒶🌸 💗’s Advice Corner</h1>
+    <p>Heartfelt, Real Talk from Your Go-To Girl 💗</p>
+    <button id="notifyBtn">🔔 New Client</button>
+  </header>
+  <main>
+    <section class="signup-section">
+      <h2>Sign Up (It’s totally FREE!) 💕</h2>
+      <p><strong>I'm not a bot! I'm a real girl giving real advice 💗</strong></p>
+      <form id="signupForm">
+        <label for="newUsername">Choose a Username:</label>
+        <input type="text" id="newUsername" required>
+
+        <label for="newPassword">Choose a Password:</label>
+        <input type="password" id="newPassword" required>
+
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>Let’s Chat 📱</h2>
+      <div class="chat-box" id="chatBox">
+        <div class="chat-msg advisor-msg">Hey there! What’s on your mind today? 💭</div>
+      </div>
+      <form id="adviceForm">
+        <label for="username">Your Username:</label>
+        <input type="text" id="username" required>
+
+        <label for="topic">Type your message like a text 📲</label>
+        <textarea id="topic" rows="3" placeholder="What’s up? Talk to me 💌" required></textarea>
+
+        <button type="submit" class="submit-btn">Send</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Advice Snippets ✨</h2>
+      <div class="advice">
+        <strong>Be gentle with yourself.</strong> Life isn’t a race, and healing takes time.
+      </div>
+      <div class="advice">
+        <strong>Set boundaries.</strong> It’s not selfish to protect your peace — it’s necessary.
+      </div>
+      <div class="advice">
+        <strong>Love isn’t supposed to hurt every day.</strong> If it does, it’s not love, it’s a lesson.
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 𝑀𝒶𝓃𝓊𝑒𝓁𝓁𝒶🌸 💗 | Real advice. Real love.
+  </footer>
+
+  <audio id="notificationSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3" preload="auto"></audio>
+  <script>
+    const notifyBtn = document.getElementById('notifyBtn');
+    const sound = document.getElementById('notificationSound');
+    const adviceForm = document.getElementById('adviceForm');
+    const chatBox = document.getElementById('chatBox');
+    const signupForm = document.getElementById('signupForm');
+
+    notifyBtn.addEventListener('click', () => {
+      sound.play();
+      alert('New advice client has arrived! 💌');
+    });
+
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newUser = document.getElementById('newUsername').value;
+      const newPass = document.getElementById('newPassword').value;
+      alert(`Welcome ${newUser}! Your free account is ready 💖`);
+      signupForm.reset();
+    });
+
+    adviceForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const topic = document.getElementById('topic').value;
+
+      const userMsg = document.createElement('div');
+      userMsg.className = 'chat-msg client-msg';
+      userMsg.innerText = topic;
+      chatBox.appendChild(userMsg);
+
+      const reply = document.createElement('div');
+      reply.className = 'chat-msg advisor-msg';
+      reply.innerText = `Thanks ${username}, I’m here for you 💕`;
+      chatBox.appendChild(reply);
+
+      adviceForm.reset();
+      chatBox.scrollTop = chatBox.scrollHeight;
+    });
+  </script>
+</body>
+</html>
